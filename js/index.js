@@ -24,13 +24,13 @@ $(document).ready(function(){
   });
 });
 
-// ****** ABOUT CAROUSEL ******
+// // ****** ABOUT CAROUSEL ******
 
-$(document).ready(function(){
-  $('.test-three').hide();
-  $('.test-four').hide();
-  $('.test-one').animate({left: '-100%'}, 4000, function(){
-    $('.test-two').animate({left: '-100%'}, 4000)
-  };
-});
+// $(document).ready(function(){
+//   $('.test-three').hide();
+//   $('.test-four').hide();
+//   $('.test-one').animate({right: '-100%'}, 4000, function(){
+//     $('.test-two').animate({right: '-100%'}, 4000)
+//   };
+// });
 

@@ -1,0 +1,82 @@
+body {
+  background-color: #fff;
+}
+.intro-box {
+  height: 500px;
+  width: 1000px;
+  margin: auto;
+}
+.color-bars {
+  display: flex;
+  overflow: hidden;
+}
+.curl {
+  width: 245.5px;
+  height: 500px;
+  justify-content: space-between;
+  top: -500px;
+  position: relative;
+}
+.curl.one {
+  background-color: #3b5f70;
+  margin-right: 6px;
+}
+.curl.two {
+  background-color: #40ada4;
+  margin-right: 6px;
+}
+.curl.three {
+  background-color: #f5df3b;
+  margin-right: 6px;
+}
+.curl.four {
+  background-color: #ed8c15;
+}
+h1 {
+  font-family: 'Miss Fajardose', cursive;
+  font-size: 100px;
+  letter-spacing: 6px;
+  color: #49668c;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 10px; 
+}
+.quiz-button {
+  position: absolute;
+  padding: 385px 370px 0px;
+  z-index: 10;
+}
+h2 a:link, h2 a:visited {
+  background-color: #181169;
+  color: #ebe4be;
+  padding: 15px 30px;
+  text-align: center; 
+  text-decoration: none;
+  font-family: 'Knewave', cursive;
+  font-size: 30px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .5);
+}
+h2 a:hover, h2 a:active {
+  background-color: #a83232;
+  color: #fff;
+}
+h3 {
+  text-align: center;
+  margin-top: 25px;
+}
+h3 a:link, h3 a:visited {
+  color: #948275;
+  text-decoration: none;
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 20px;
+}
+h3 a:hover, h3 a:active {
+  color: #ed8c15;
+  font-size: 25px;
+}
+.em-dash {
+  color: #ccc;
+  font-family: 'Cinzel Decorative', cursive;
+  font-size: 20px;
+  padding: 0px 5px;
+}

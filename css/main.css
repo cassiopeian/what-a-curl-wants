@@ -222,6 +222,90 @@ footer {
   text-align: center;
 }
 
+/*********************** quiz page ***********************/
+
+.curl-quiz {
+  height: 450px;
+  width: 750px;
+  background-color: #2f314f;
+  margin: 3% auto;
+}
+.first-quiz-header {
+  color: #8cd4ca;
+  font-family: 'Elsie Swash Caps', cursive;
+  font-weight: 900;
+  font-size: 70px;
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 20px;
+}
+.first-quiz-graf {
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 20px;
+  line-height: 1.5em;
+  color: #fff;
+  padding: 0px 80px 30px 80px;
+  text-align: justify;
+}
+.quiz-start, .quiz-next {
+  background-color: #fcba03;
+  font-family: 'Knewave', cursive;
+  font-size: 30px;
+  letter-spacing: 0.5px;
+  color: #50667d;
+  /*border-radius: 5px;*/
+  padding: 20px 20px;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  margin: 0px 250px;
+}
+a.quiz-start:link, 
+a.quiz-start:visited {
+  text-decoration: none;
+}
+a.quiz-start:hover {
+  background-color: #4c96c7;
+  color: #fcba03;
+}
+.quiz-headers {
+  color: #8cd4ca;
+  font-family: 'Elsie Swash Caps', cursive;
+  font-weight: 900;
+  font-size: 70px;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+.quiz-grafs {
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 20px;
+  line-height: 1.5em;
+  padding-bottom: 15px;
+  color: #fff;
+  text-align: center;
+}
+.imgbox {
+  height: 200px;
+  width: 200px;
+  background-color: #c1c5e3;
+  margin: 10px 10px;
+}
+.options {
+  font-family: 'Tenor Sans', sans-serif;
+  font-size: 14px;
+  color: #fff;
+  text-align: center;
+}
+.porosity {
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 139px;
+}
+.answer-left {
+
+}
+
 /*********************** learn more page ***********************/
 
 .coming-soon {
@@ -230,4 +314,102 @@ footer {
   font-size: 120px;
   text-align: center;
   padding: 275px;
+}
+
+/*********************** hamburger menu ***********************/
+
+header .close-nav {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  z-index: 83;
+  cursor: pointer;
+  display: none;
+}
+
+header .close-nav span {
+  display: block;
+  width: 20px;
+  height: 3px;
+  background-color: #c1c5e3;
+  transform: rotate(45deg) translate(2px);
+  -webkit-transform: rotate(45deg) translate(2px);
+  -moz-transform: rotate(45deg) translate(2px);
+}
+header .close-nav span.right {
+  transform: rotate(-45deg) translate(2px);
+  -webkit-transform: rotate(-45deg) translate(2px);
+  -moz-transform: rotate(-45deg) translate(2px);
+}
+
+@media only screen and (max-width: 1049px) {
+  .graf.about-quiz {
+    display: block;
+  }
+  .quiz-talk {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .quiz-grab {
+    width: 100%;
+  }
+  .about-placeholder {
+    margin-left: 0px;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 990px) {
+ /* h1 {
+    font-size: 30px;
+  }*/
+  header .close-nav {
+    display: block;
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    background-color: #49668c;
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    z-index: 80;
+  }
+  ul {
+    font-size: 30px;
+  }
+  nav ul {
+    display: block;
+    text-align: center;
+    margin-top: 35%;
+  }
+  .nav-links a:link,
+  .nav-links a:visited {
+    padding: 1px 16px;
+    line-height: 40px;
+  }
+  .hamburger-border {
+    height: 20%;
+    width: 100%;
+    background-image: url('../images/hair-banner.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    bottom: 0;
+  }
+  .hamburger {
+    display: block;
+  }
+  .hamburger span {
+    display: block;
+    width: 20px;
+    height: 3px;
+    background-color: #c1c5e3;
+    margin: 2px 0;
+  }
+  footer {
+    font-size: 10px;
+  }
 }

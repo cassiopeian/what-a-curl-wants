@@ -24,7 +24,31 @@ $(document).ready(function(){
   });
 });
 
-// // ****** ABOUT CAROUSEL ******
+// ****** HAMBURGER MENU ******
+
+$('.hamburger').on('click', function(){
+  $('nav').animate({left: 0});
+});
+
+
+$('.close-nav').on('click', function(){
+  $('nav').animate({left: '100%'});
+});
+
+$(window).on('resize', function(){
+  $('nav').removeAttr('style');
+});
+
+// ****** QUIZ BUTTON CLICKS ******
+
+$(document).ready(function(){
+  $('.questions').hide();
+});
+$('.quiz-start').on('click', function(){
+  $('.active').next('div').addClass('active').prev('div').removeClass('active');
+});
+
+// ****** ABOUT CAROUSEL ******
 
 // $(document).ready(function(){
 //   $('.test-three').hide();

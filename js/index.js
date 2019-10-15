@@ -41,12 +41,49 @@ $(window).on('resize', function(){
 
 // ****** QUIZ BUTTON CLICKS ******
 
-$(document).ready(function(){
-  $('.questions').hide();
-});
 $('.quiz-start').on('click', function(){
-  $('.active').next('div').addClass('active').prev('div').removeClass('active');
+  $('.quiz-welcome').hide();
+  $('.quiz-1').show();
 });
+$('.options.a, .options.b').on('click', function(){
+  $('.quiz-1').hide();
+  $('.quiz-2').show();
+});
+$('.options.c, .options.d').on('click', function(){
+  $('.quiz-2').hide();
+  $('.quiz-3').show();
+});
+
+// $('.go-back').on('click', function(){
+//     $('.quiz-1').hide();
+//     $('.quiz-welcome').show();
+// });
+
+// $('.go-back').on('click', function(){
+//   $('.active').previous('section').addClass('active').next('section').removeClass('active');
+// });
+
+// $('.go-back').on('click', function(){
+//   $(this).hide().previous('section').show();
+// });
+
+// let panel;
+
+// $('.go-back').on('click', function(){
+//   if (panel === '.quiz-1') {
+//     $('.quiz-1').hide();
+//     $('.quiz-welcome').show();
+//   }
+// });
+
+
+// $(document).ready(function(){
+//   $('.questions').hide();
+// });
+// $('.quiz-start').on('click', function(){
+//   $(this).hide().show('.quiz-2');
+// });
+
 
 // ****** ABOUT CAROUSEL ******
 

@@ -68,7 +68,7 @@ li a {
 
 /*********************** about page ***********************/
 
-.abc-one {
+/*.abc-one {
   display: flex;
   width:100%;
   height: 260px;
@@ -93,7 +93,7 @@ li a {
   width: 60%;
   height: 260px;
   background-color: #595d61;
-}
+}*/
 
 body, html {
   height: 100%;
@@ -141,6 +141,18 @@ body, html {
 .graf {
   margin: 40px 130px;
 }
+a.graf-links:link,
+a.graf-links:visited {
+  color: #cf6819;
+  text-decoration: none;
+}
+a.graf-links:hover {
+  color: #ed8c15;
+}
+.special {
+  text-transform: uppercase;
+  letter-spacing: .2em;
+}
 #about-headline {
   font-family: 'Elsie Swash Caps', cursive;
   font-weight: 900;
@@ -151,7 +163,7 @@ body, html {
 .about-graf {
   font-family: 'Tenor Sans', sans-serif;
   font-size: 17px;
-  /*padding: 0px 110px 40px 110px;*/
+  padding-bottom: 30px;
   text-align: justify;
 }
 .about-graf.introduction {
@@ -159,8 +171,12 @@ body, html {
 }
 .about-graf.take-quiz {
   color: #fff7d4;
+  line-height: 23px;
 }
-.yt {
+.final {
+  padding-bottom: 0px;
+}
+.carousel {
   display: flex;
   margin: 40px auto;
   height: 200px;
@@ -170,26 +186,27 @@ body, html {
 .slideshow {
   display: flex;
   height: 100%;
-  width: 800px;
+  /*width: 800px;*/
   overflow: hidden;
   align-items: center;
   justify-content: space-between;
 }
 .blox {
   height: 100%;
-  width: 100%;
-  margin: 0px 3px;
-  background-color: #e4e4ed;
+  margin: 0px 20px;
 }
-/*.about-quiz {
+.flexed {
   display: flex;
-  height: 100%;
-}*/
-.quiz-talk {
-  height: 100%;
-  width: 70%;
 }
-.quiz-grab {
+.about-left {
+  height: 100%;
+  width: 80%;
+  padding-right: 25px;
+}
+.elle {
+  max-height: 400px;
+}
+.about-right {
   height: 100%;
 }
 .about-bhead {
@@ -203,9 +220,9 @@ body, html {
 .quizzy-box {
   position: absolute;
   width: 50%;
-  top: 25%;
+  top: 21%;
   left: 25%;
-  padding: 60px;
+  padding: 54px;
   background-color: #fcba03;
 }
 
@@ -259,7 +276,7 @@ body, html {
   height: 300px;
   width: 300px;
 }
-figure {
+.product-box {
   height: 300px;
   width: 300px;
   overflow: hidden;
@@ -330,10 +347,10 @@ footer {
 /*********************** quiz page ***********************/
 
 .curl-quiz {
-  height: 100%;
+  height: 80%;
   width: 55%;
   background-color: #2f314f;
-  margin: 2% auto;
+  margin: 2.4% auto;
 }
 .first-quiz-header {
   color: #8cd4ca;
@@ -341,7 +358,7 @@ footer {
   font-weight: 900;
   font-size: 80px;
   text-align: center;
-  padding-top: 70px;
+  padding-top: 20%;
   padding-bottom: 20px;
 }
 .first-quiz-graf {
@@ -465,6 +482,10 @@ button.options:hover {
 }
 .questions {
   display: none;
+}
+
+.questions.active {
+  display: block;
 }
 
 /*********************** learn more page ***********************/

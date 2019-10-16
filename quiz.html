@@ -35,24 +35,24 @@
   </header>
 
   <main class="curl-quiz">
-    <section class="quiz-welcome">
+    <section class="questions quiz-welcome active">
       <h2 class="first-quiz-header">Hey, Curlfriend</h2>
-      <p class="first-quiz-graf">If you're tired of testing out expensive hair products, you've come to the right place. Take this quiz to determine your curl type and learn which products are best suited for <i>you</i>.</p>
+      <p class="first-quiz-graf">If you're tired of testing out expensive hair products, you've come to the right place. Take this quiz to determine what your curls want and learn which products are best suited for <i>you</i>.</p>
       <button class="quiz-start">START</button>
     </section>
 
-    <section class="questions quiz-1 active">
+    <section class="questions quiz-1">
       <h2 class="quiz-headers">Porosity</h2>
       <p class="definition"><span class="brkt">{</span>your hair's ability to absorb moisture<span class="brkt">}</span></p>
       <h3 class="quiz-grafs">Which of the following best describes your hair?</h3>
       <div class="porosity">
         <div class="answer-left">
           <div class="imgbox"></div>
-          <button class="options a">High Porosity</button>
+          <button class="options a" data-type="porosity" data-value="high">High Porosity</button>
         </div>
         <div class="answer-right">
           <div class="imgbox"></div>
-          <button class="options b">Low Porosity</button>
+          <button class="options b" data-type="porosity" data-value="low">Low Porosity</button>
         </div>
       </div>
       <div class="go-back">
@@ -69,11 +69,11 @@
       <div class="density">
         <div class="answer-left">
           <div class="imgbox"></div>
-          <button class="options c">High Density</button>
+          <button class="options c" data-type="density" data-value="high">High Density</button>
         </div>
         <div class="answer-right">
           <div class="imgbox"></div>
-          <button class="options d">Low Density</button>
+          <button class="options d" data-type="density" data-value="low">Low Density</button>
         </div>
       </div>
       <div class="go-back">
@@ -85,12 +85,33 @@
     
     <section class="questions quiz-3">
       <h2 class="quiz-headers">Protein</h2>
-      <p class="definition"><span class="brkt">{</span>helps supply keratin to hair; may cause brittleness and breakage in excess<span class="brkt">}</span></p>
+      <p class="definition"><span class="brkt">{</span>helps supply keratin to hair; may cause brittleness and breakage, in excess<span class="brkt">}</span></p>
       <h3 class="quiz-grafs">Does your hair need more protein?</h3>
       <div class="protein">
         <div class="answer-left">
           <div class="imgbox"></div>
-          <button class="options e">Yes, please!</button>
+          <button class="options e" data-type="protein" data-value="yes">Yes, please!</button>
+        </div>
+        <div class="answer-right">
+          <div class="imgbox"></div>
+          <button class="options f" data-type="protein" data-value="no">No, thanks!</button>
+        </div>
+      </div>
+      <div class="go-back">
+        <div class="back-button">
+          <span class="left"></span><span class="right"></span>
+        </div>
+      </div>
+    </section>  
+
+    <section class="questions quiz-3">
+      <h2 class="quiz-headers">Congrats!</h2>
+      <p class="definition"><span class="brkt">{</span>you finished the quiz<span class="brkt">}</span></p>
+      <h3 class="quiz-grafs">Are you ready to see your results?</h3>
+      <div class="protein">
+        <div class="answer-left">
+          <div class="imgbox"></div>
+          <button class="options e test">Yes, please!</button>
         </div>
         <div class="answer-right">
           <div class="imgbox"></div>
@@ -102,23 +123,8 @@
           <span class="left"></span><span class="right"></span>
         </div>
       </div>
-    </section>  
-
-    <!-- <div class="questions quiz-1">
-      <h2 class="quiz-headers">Pattern</h2>
-      <p class="quiz-grafs">Bleep bloop bop.</p>
-      <a href="" class="quiz-next">NEXT</a>
-    </div> -->
-
-    <!-- <div class="questions quiz-4">
-      <h2 class="quiz-headers">Protein</h2>
-      <p class="quiz-grafs">Bleep bloop bop.</p>
-      <a href="" class="quiz-next">NEXT</a>
-    </div> -->
+    </section>    
   </main>
-  
-
-  <!-- <section class="coming-soon">COMING SOON</section> -->
 
   <footer>&copy; 2019 What a Curl Wants</footer>
   <script type="text/javascript" src="js/index.js"></script>

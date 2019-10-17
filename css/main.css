@@ -24,7 +24,7 @@
   border-bottom: 3px solid #948275;
   z-index: 10;
 }
-h1 {
+.logo {
   font-family: 'Miss Fajardose', cursive;
   font-size: 41px;
   letter-spacing: 3px;
@@ -52,7 +52,7 @@ ul {
   background-color: #a83275;
   color: #fff;
 }
-li a {
+.nav-links a {
   list-style-type: none;
   text-decoration: none;
   color: #9b9fbd;
@@ -64,6 +64,15 @@ li a {
 .caps-links a:link,
 .caps-links a:visited {
   padding: 21.5px 10px;
+}
+footer {
+  background-color: #948275;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  color: #e6dfd8;
+  padding: 30px 20px;
+  text-align: center;
 }
 
 /*********************** about page ***********************/
@@ -113,6 +122,17 @@ body, html {
   background-repeat: no-repeat;
   background-size: cover;
 }
+#wash-header {
+  height: 450px;
+  background-image: url(../images/wash-header.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.flexed {
+  display: flex;
+  margin: 40px 130px;
+}
 .about-blurb {
   position: absolute;
   left: 0;
@@ -123,7 +143,7 @@ body, html {
   opacity: .3;
   padding: 50px 10px;
 }
-.caption {
+#caption {
   font-family: 'Miss Fajardose', cursive;
   font-size: 52px;
   line-height: 37px;
@@ -138,43 +158,58 @@ body, html {
   text-transform: uppercase;
   text-align: center;
 }
-.graf {
-  margin: 40px 130px;
+a.flexed-links:link,
+a.flexed-links:visited {
+  color: #ad76ac;
+  font-weight: bold;
+  text-decoration: none;
 }
-a.graf-links:link,
-a.graf-links:visited {
+a.flexed-links:hover {
+  color: #f5a2a2;
+}
+a.quizzy-links:link,
+a.quizzy-links:visited {
   color: #cf6819;
   text-decoration: none;
 }
-a.graf-links:hover {
+a.quizzy-links:hover {
   color: #ed8c15;
 }
 .special {
   text-transform: uppercase;
   letter-spacing: .2em;
 }
+.extra {
+  font-weight: bold;
+  font-style: italic;
+  color: #000;
+}
 #about-headline {
   font-family: 'Elsie Swash Caps', cursive;
   font-weight: 900;
   font-size: 40px;
-  /*padding: 70px 0px 15px 110px;*/
+  color: #9c065b;
   padding-bottom: 15px;
 }
 .about-graf {
   font-family: 'Tenor Sans', sans-serif;
   font-size: 17px;
-  padding-bottom: 30px;
+  line-height: 23px;
   text-align: justify;
+  padding-bottom: 30px;
 }
 .about-graf.introduction {
-  color: #000;
+  color: #716d78;
 }
 .about-graf.take-quiz {
   color: #fff7d4;
-  line-height: 23px;
 }
 .final {
   padding-bottom: 0px;
+}
+.pink-bar {
+  background-color: #a83275;
+  padding: 20px 0px;
 }
 .carousel {
   display: flex;
@@ -195,21 +230,19 @@ a.graf-links:hover {
   height: 100%;
   margin: 0px 20px;
 }
-.flexed {
-  display: flex;
-}
 .about-left {
   height: 100%;
   width: 80%;
   padding-right: 25px;
 }
 .elle {
-  max-height: 400px;
+  max-height: 700px;
 }
 .about-right {
   height: 100%;
+  padding-left: 25px;
 }
-.about-bhead {
+#about-bhead {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-weight: 700;
   font-size: 25px;
@@ -226,7 +259,7 @@ a.graf-links:hover {
   background-color: #fcba03;
 }
 
-.about-placeholder {
+/*.about-placeholder {
   display: flex;
   margin-left: 40px;
   height: 300px;
@@ -238,7 +271,7 @@ a.graf-links:hover {
   color: #666;
   justify-content: center;
   align-items: center;
-}
+}*/
 
 /*********************** products page ***********************/
 
@@ -334,18 +367,14 @@ a.graf-links:hover {
 .buttons:hover {
   background-color: #9c065b;
 }
-footer {
-  background-color: #948275;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  font-weight: 300;
-  font-size: 15px;
-  color: #e6dfd8;
-  padding: 30px 20px;
-  text-align: center;
-}
 
 /*********************** quiz page ***********************/
 
+#splatter {
+  background-image: url(../images/splatter-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .curl-quiz {
   height: 80%;
   width: 55%;
@@ -391,7 +420,7 @@ footer {
   text-transform: uppercase;
   color: #50667d;
   border: none;
-  padding: 15px 49px;
+  padding: 5px 20px;
   text-decoration: none;
   text-align: center;
   display: block;
@@ -469,16 +498,27 @@ button.options:hover {
   color: #e4e4ed;
   text-align: center;
 }
-.imgbox {
+.results {
+  padding-top: 20px;
+}
+.quiz-pics {
   height: 200px;
   width: 200px;
-  background-color: #c1c5e3;
+  border-radius: 50%;
   margin: auto;
+}
+#results-pic {
+  max-width: 380px;
+  display: block;
+  margin: 0px auto;
 }
 .porosity, .density, .protein {
   display: flex;
   justify-content: space-between;
   margin: 0% 15%;
+}
+.congrats {
+  margin: auto;
 }
 .questions {
   display: none;

@@ -6,11 +6,12 @@
   <meta name="keywords" content="cg method, education, hair products, beauty"> 
   <meta name="author" content="Cassiopeia Neely">
   <title>Quiz | What a Curl Wants</title>
+  <link rel="shortcut icon" type="image/png" href="images/waca-favicon.png">
   <link href="https://fonts.googleapis.com/css?family=Elsie+Swash+Caps:900|M+PLUS+Rounded+1c:300,700|Miss+Fajardose|Knewave|Tenor+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
-<body>
+<body id="splatter">
   <header>
   <div class="banner"></div>
   <div class="nav">
@@ -47,12 +48,12 @@
       <h3 class="quiz-grafs">Which of the following best describes your hair?</h3>
       <div class="porosity">
         <div class="answer-left">
-          <div class="imgbox"></div>
-          <button class="options a" data-type="porosity" data-value="high">High Porosity</button>
+          <img class="quiz-pics" src="images/aloe.png">
+          <button class="options user-option a" data-type="porosity" data-value="high">High Porosity</button>
         </div>
         <div class="answer-right">
-          <div class="imgbox"></div>
-          <button class="options b" data-type="porosity" data-value="low">Low Porosity</button>
+          <img class="quiz-pics" src="images/spongebob.png">
+          <button class="options user-option b" data-type="porosity" data-value="low">Low Porosity</button>
         </div>
       </div>
       <div class="go-back">
@@ -68,12 +69,12 @@
       <h3 class="quiz-grafs">How much hair do you have up there?</h3>
       <div class="density">
         <div class="answer-left">
-          <div class="imgbox"></div>
-          <button class="options c" data-type="density" data-value="high">High Density</button>
+          <img class="quiz-pics" src="images/high-density-hair.png">
+          <button class="options user-option c" data-type="density" data-value="high">High Density</button>
         </div>
         <div class="answer-right">
-          <div class="imgbox"></div>
-          <button class="options d" data-type="density" data-value="low">Low Density</button>
+          <img class="quiz-pics" src="images/low-density-hair.png">
+          <button class="options user-option d" data-type="density" data-value="low">Low Density</button>
         </div>
       </div>
       <div class="go-back">
@@ -89,12 +90,12 @@
       <h3 class="quiz-grafs">Does your hair need more protein?</h3>
       <div class="protein">
         <div class="answer-left">
-          <div class="imgbox"></div>
-          <button class="options e" data-type="protein" data-value="yes">Yes, please!</button>
+          <img class="quiz-pics" src="images/needs-protein.png">
+          <button class="options user-option e" data-type="protein" data-value="yes">Yes, please!</button>
         </div>
         <div class="answer-right">
-          <div class="imgbox"></div>
-          <button class="options f" data-type="protein" data-value="no">No, thanks!</button>
+          <img class="quiz-pics" src="images/has-protein.png">
+          <button class="options user-option f" data-type="protein" data-value="no">No, thanks!</button>
         </div>
       </div>
       <div class="go-back">
@@ -108,22 +109,29 @@
       <h2 class="quiz-headers">Congrats!</h2>
       <p class="definition"><span class="brkt">{</span>you finished the quiz<span class="brkt">}</span></p>
       <h3 class="quiz-grafs">Are you ready to see your results?</h3>
-      <div class="protein">
-        <div class="answer-left">
-          <div class="imgbox"></div>
-          <button class="options e test">Yes, please!</button>
-        </div>
-        <div class="answer-right">
-          <div class="imgbox"></div>
-          <button class="options f">No, thanks!</button>
-        </div>
+      <div class="congrats">
+        <img id="results-pic" src="images/anxious.png">
+        <button class="options e test">See Results</button>
       </div>
       <div class="go-back">
         <div class="back-button">
           <span class="left"></span><span class="right"></span>
         </div>
       </div>
-    </section>    
+    </section>  
+
+    <section class="questions quiz-4">
+      <h3 class="quiz-grafs results"></h3>
+      <div class="congrats">
+        <p class="result-name">
+        <!-- <button class="options e test">See Results</button>
+      </div> -->
+        <div class="go-back">
+          <div class="back-button">
+          <span class="left"></span><span class="right"></span>
+        </div>
+      </div>
+    </section>   
   </main>
 
   <footer>&copy; 2019 What a Curl Wants</footer>

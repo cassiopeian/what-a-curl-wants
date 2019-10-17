@@ -14,6 +14,9 @@
   background-size: cover;
   height: 150px;
 }
+.waca-favicon {
+  display: none;
+}
 .nav {
   background-color: #49668c;
   display: flex;
@@ -76,33 +79,6 @@ footer {
 }
 
 /*********************** about page ***********************/
-
-/*.abc-one {
-  display: flex;
-  width:100%;
-  height: 260px;
-  background-color: #fff;
-}
-.test-one {
-  width: 40%;
-  height: 260px;
-  background-color: #ccd5e0;
-}
-.test-two {
-  width: 60%;
-  height: 260px;
-  background-color: #c6c6c6;
-}
-.test-three {
-  width: 40%;
-  height: 260px;
-  background-color: #82a5d1;
-}
-.test-four {
-  width: 60%;
-  height: 260px;
-  background-color: #595d61;
-}*/
 
 body, html {
   height: 100%;
@@ -215,13 +191,37 @@ a.quizzy-links:hover {
   display: flex;
   margin: 40px auto;
   height: 200px;
-  width: 900px;
+  width: 776px;
   align-items: center;
+}
+.arrow {
+
+}
+.guillemet {
+  font-family: 'Elsie Swash Caps', cursive;
+  font-size: 90px;
+  padding: 1px;
+  display: inline-block;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  color: #fff;
+  background-color: #a83275;
+}
+button.guillemet:hover {
+  color: #c1c5e3; 
+  cursor: pointer;
+}
+.gauche {
+
+}
+.droite {
+
 }
 .slideshow {
   display: flex;
   height: 100%;
-  /*width: 800px;*/
+  width: 718px;
   overflow: hidden;
   align-items: center;
   justify-content: space-between;
@@ -336,9 +336,6 @@ a.quizzy-links:hover {
   margin-bottom: 10px;
   height: 30px;
 }
-/*span {
-  margin: 5px 0px;
-}*/
 .bubble {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   font-weight: 300;
@@ -374,6 +371,7 @@ a.quizzy-links:hover {
   background-image: url(../images/splatter-bg.png);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position-y: 80px;
 }
 .curl-quiz {
   height: 80%;
@@ -564,6 +562,28 @@ header .close-nav span.right {
   -moz-transform: rotate(-45deg) translate(2px);
 }
 
+@media only screen and (max-width: 1402px) {
+  .about-graf.take-quiz {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  .flexed {
+    display: block;
+    margin: 0 auto;
+    width: 500px;
+  }
+  .about-graf.introduction {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .elle {
+    max-height: 400px;
+  }
+}
+
 @media only screen and (max-width: 1049px) {
   .graf.about-quiz {
     display: block;
@@ -581,13 +601,26 @@ header .close-nav span.right {
   }
 }
 
+@media only screen and (max-width: 950px) {
+  .card-row {
+    display: block;
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+
 @media only screen and (max-width: 990px) {
- /* h1 {
-    font-size: 30px;
-  }*/
   header .close-nav {
     display: block;
   }
+
+  .waca-favicon {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 90px auto 10px;
+  }
+
   nav {
     position: fixed;
     top: 0;
@@ -604,7 +637,7 @@ header .close-nav span.right {
   nav ul {
     display: block;
     text-align: center;
-    margin-top: 35%;
+    margin-top: 10%;
   }
   .nav-links a:link,
   .nav-links a:visited {

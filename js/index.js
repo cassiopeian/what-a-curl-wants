@@ -50,11 +50,10 @@ let userSelection = {
 let products = [
   {
     'name': 'CAROL\'S DAUGHTER SACRED TIARE RESTORING HAIR MASK',
-    'image': '<img class="product-img" src="images/products/carols-daughter-hair-mask.png" alt="CAROL\'S DAUGHTER SACRED TIARE RESTORING HAIR MASK (8 OZ.)">',
+    'image': '<img class="product-img" src="images/products/carols-daughter-hair-mask.png" alt="SACRED TIARE RESTORING HAIR MASK (8 OZ.)">',
     'porosity': 'high',
     'density': 'high',
     'protein': 'yes',
-
   },
   {
     'name': 'AFRICAN PRIDE MOISTURE MIRACLE MOROCCAN CLAY & SHEA BUTTER HEAT-ACTIVATED MASQUE',
@@ -62,15 +61,76 @@ let products = [
     'porosity': 'low',
     'density': 'low',
     'protein': 'no',
-
   },
   {
     'name': 'AUNT JACKIE\'S CURLS & COILS FIX MY HAIR INTENSIVE REPAIR CONDITIONING MASQUE',
-    'image': '<img class="product-img" src="images/products/aunt-jackies-conditioning-masque.png" alt="AUNT JACKIE\'S CURLS & COILS FLAXSEED RECIPES FIX MY HAIR INTENSIVE REPAIR CONDITIONING MASQUE (15 OZ.)">',
+    'image': '<img class="product-img" src="images/products/aunt-jackies-conditioning-masque.png" alt="CURLS & COILS FLAXSEED RECIPES FIX MY HAIR INTENSIVE REPAIR CONDITIONING MASQUE (15 OZ.)">',
     'porosity': 'low',
     'density': 'high',
+    'protein': 'no',
+  },
+  {
+    'name': 'UNCLE FUNKY\'S DAUGHTER HEAL & RENEW INTENSIVE HAIR MASQUE (8 OZ.)',
+    'image': '<img class="product-img src="images/products/uncle-funky-masque.png alt="HEAL AND RENEW INTENSIVE HAIR MASQUE">',
+    'porosity': 'high',
+    'density': 'high',
+    'protein': 'yes',    
+  },
+  {
+    'name': 'AUNT JACKIE\'S CURLS & COILS CURL LA LA DEFINING CURL CUSTARD (15 OZ.)',
+    'image': '<img class="product-img" src="images/products/aunt-jackies-curl-custard.png" alt="CURLS & COILS CURL LA LA DEFINING CURL CUSTARD (15 OZ.)">',
+    'porosity': 'low',
+    'density': 'high',
+    'protein': 'no',    
+  },
+  {
+    'name': 'DEVACURL FRIZZ-FREE VOLUMIZING FOAM (7.5 OZ.)',
+    'image': '<img class="product-img" src="images/products/devacurl-volumizing-foam.png" alt="DEVACURL FRIZZ-FREE VOLUMIZING FOAM (7.5 OZ.)">',
+    'porosity': 'high',
+    'density': 'low',
+    'protein': 'no',    
+  },
+  {
+    'name': 'CAMILLE ROSE NATURALS ALMOND JAI TWISTING BUTTER (8 OZ.)',
+    'image': '<img class="product-img" src="images/products/camille-rose-almond-butter.png" alt="CAMILLE ROSE NATURALS ALMOND JAI TWISTING BUTTER (8 OZ.)">',
+    'porosity': 'low',
+    'density': 'high',
+    'protein': 'no',    
+  },
+  {
+    'name': 'BED HEAD BY TIGI FOXY CURLS CONTOUR CREAM (6.76 OZ.)',
+    'image': '<img class="product-img" src="images/products/tigi-bed-head-foxycurls.png" alt="BED HEAD BY TIGI FOXY CURLS CONTOUR CREAM (6.76 OZ.)">',
+    'porosity': 'high',
+    'density': 'low',
+    'protein': 'no',    
+  },
+  {
+    'name': 'CANTU MOISTURIZING CURL ACTIVATOR CREAM (12 OZ.)',
+    'image': '<img class="product-img" src="images/products/cantu-curl-activator.png" alt="CANTU MOISTURIZING CURL ACTIVATOR CREAM (12 OZ.)">',
+    'porosity': 'low',
+    'density': 'low',
     'protein': 'yes',
-
+  },
+  {
+    'name': 'MIXED CHICKS LEAVE-IN CONDITIONER (10 OZ.)',
+    'image': '<img class="product-img" src="images/products/mixed-chicks-leave-in.png" alt="MIXED CHICKS LEAVE-IN CONDITIONER (10 OZ.)">',
+    'porosity': 'high',
+    'density': 'high',
+    'protein': 'no',    
+  },
+  {
+    'name': 'SHEAMOISTURE BAOBAB & TEA TREE OILS LOW POROSITY PROTEIN-FREE LEAVE-IN DETANGLER (8 OZ.)',
+    'image': '<img class="product-img" src="images/products/shea-moisture-detangler.png" alt="SHEAMOISTURE BAOBAB & TEA TREE OILS LOW POROSITY PROTEIN-FREE LEAVE-IN DETANGLER (8 OZ.)">',
+    'porosity': 'low',
+    'density': 'high',
+    'protein': 'no',    
+  },
+  {
+    'name': 'OUIDAD MOISTURE LOCK LEAVE-IN CONDITIONER (8.5 OZ.)',
+    'image': '<img class="product-img" src="images/products/ouidad-leave-in.png" alt="OUIDAD MOISTURE LOCK LEAVE-IN CONDITIONER (8.5 OZ.)">',
+    'porosity': 'low',
+    'density': 'low',
+    'protein': 'no',    
   },
 ];
 
@@ -80,7 +140,7 @@ $('.quiz-start').on('click', function(){
   $('.questions.active').removeClass('active').next('.questions').addClass('active');
 });
 
-$('.questions .options').on('click', function(){
+$('.questions .user-option').on('click', function(){
   $('.questions.active').removeClass('active').next('.questions').addClass('active');
   userSelection[$(this).attr('data-type')] = $(this).attr('data-value');
   console.log(userSelection);
@@ -112,6 +172,22 @@ $(".test").on("click", function(){
   for (let num = 0; num < products.length; num++){
     if (userSelection.protein === products[num].protein) {
       console.log(products[num].name);
+      $('.quiz-headers, .definition, .quiz-grafs, #results-pic, .options.e.test').hide();
+      // $('.quiz-grafs').html('*PSST* YOUR CURLS TOLD US THEY WANT THIS...');
+      // $('.congrats').html(products[num].image);
+      $('.congrats').append("<img style='height: 180px; width: 180px; border-radius: 50%' src='"+products[num].image+"' />");
+    }
+    else if (userSelection.density === products[num].density) {
+      console.log(products.name);
+      $('.quiz-headers, .definition, .quiz-grafs, #results-pic, .options.e.test').hide();
+      // $('.quiz-grafs').html('*PSST* YOUR CURLS TOLD US THEY WANT THIS...');
+      $('.congrats').append("<img style='height: 180px; width: 180px; border-radius: 50%' src='"+products[num].image+"' />");
+    }
+    else if (userSelection.protein === products[num].protein) {
+      console.log(products.name);
+      $('.quiz-headers, .definition, .quiz-grafs, #results-pic, .options.e.test').hide();
+      // $('.quiz-grafs').html('*PSST* YOUR CURLS TOLD US THEY WANT THIS...');
+      $('.congrats').append("<img style='height: 180px; width: 180px; border-radius: 50%' src='"+products[num].image+"' />");
     }
   }
 });
